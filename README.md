@@ -1,6 +1,31 @@
-## AWS Certificate Examination Preparation Guide
+# AWS Certificate Examination Preparation Guide
 
-This repository presents the preparation guide for [AWS Certificate Examination](https://aws.amazon.com/certification/) written by [Yunpeng](https://yunpengn.github.io/).
+This repository presents the preparation guide for [AWS Certificate Examination](https://aws.amazon.com/certification/) written by [Yunpeng](https://yunpengn.github.io/). Currently, it is proundly powered by [GitBook](https://github.com/GitbookIO/gitbook).
+
+- Production Site: [https://yunpengn.github.io/CertAWS/](https://yunpengn.github.io/CertAWS/)
+- Staging Site: [https://yunpengn-blog.netlify.com/](https://yunpengn-blog.netlify.com/)
+
+## Development
+
+- Make sure you have installed the latest version of [Node.js](https://nodejs.org/), [Npm](https://www.npmjs.com) and [Git](https://git-scm.com/) on your development machine. Npm should come with Node.js.
+	- You chould check them by `git --version`, `node -v` and `npm -v`.
+- Fork and clone this repository to your computer.
+```bash
+git clone git@github.com:yunpengn/CertAWS.git
+```
+- Navigate to this directory.
+```bash
+cd CertAWS
+```
+- Install all the dependencies stated in `package.json` (or `package-lock.json`).
+```bash
+npm install
+```
+- Run the GitBook server to host the website locally.
+```bash
+npm start
+```
+- Now, you can visit the website at `http://localhost:4000/`.
 
 ## Licence
 

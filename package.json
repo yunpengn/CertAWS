@@ -1,0 +1,24 @@
+{
+  "author": {
+    "name": "Yunpeng Niu",
+    "email": "neilniuyunpeng@gmail.com",
+    "url": "https://yunpengn.github.io/"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "lodash": ">=4.17.11"
+  },
+  "homepage": "https://github.com/yunpengn/CertAWS",
+  "license": "CC-BY-ND-4.0",
+  "name": "CertAWS",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yunpengn/CertAWS.git"
+  },
+  "scripts": {
+    "deploy": "gitbook build",
+    "start": "gitbook serve"
+  },
+  "version": "0.1.0"
+}

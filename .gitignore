@@ -1,6 +1,9 @@
 # Mac OS-specific files
 .DS_Store
 
+# GitBook build output folder
+_book/
+
 # Logs
 logs
 *.log
