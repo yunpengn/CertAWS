@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/yunpengn/CertAWS.svg?branch=master)](https://travis-ci.com/yunpengn/CertAWS)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=yunpengn/CertAWS)](https://dependabot.com)
+
 # AWS Certificate Examination Preparation Guide
 
 This repository presents the preparation guide for [AWS Certificate Examination](https://aws.amazon.com/certification/) written by [Yunpeng](https://yunpengn.github.io/). Currently, it is proundly powered by [GitBook](https://github.com/GitbookIO/gitbook).
