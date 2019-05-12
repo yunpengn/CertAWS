@@ -1,0 +1,28 @@
+{
+	"author": "Yunpeng Niu <neilniuyunpeng@gmail.com>",
+	"description": "",
+	"direction": "ltr",
+	"language": "en",
+	"links": {
+		"sidebar": {
+		}
+	},
+	"pdf": {
+		"fontSize": 12,
+		"footerTemplate": null,
+		"headerTemplate": null,
+		"margin": {
+			"bottom": 36,
+			"left": 52,
+			"right": 52,
+			"top": 36
+		},
+		"pageNumbers": true,
+		"paperSize": "a4"
+	},
+	"structure": {
+		"readme": "INTRO.md",
+		"summary": "SUMMARY.md"
+	},
+	"title": "CertAWS"
+}
