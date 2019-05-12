@@ -10,7 +10,7 @@ This repository presents the preparation guide for [AWS Certificate Examination]
 
 ## Development
 
-- Make sure you have installed the latest version of [Node.js](https://nodejs.org/), [Npm](https://www.npmjs.com) and [Git](https://git-scm.com/) on your development machine. Npm should come with Node.js.
+- Make sure you have installed the latest version of [Node.js](https://nodejs.org/), [Npm](https://www.npmjs.com/) and [Git](https://git-scm.com/) on your development machine. Npm should come with Node.js.
 	- You chould check them by `git --version`, `node -v` and `npm -v`.
 - Fork and clone this repository to your computer.
 ```bash
