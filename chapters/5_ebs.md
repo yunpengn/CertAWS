@@ -12,7 +12,9 @@
 - Snapshots exist on S3. They are point-in-time copies of volumes.
 - Snapshots are also **incremental** (only blocks that have changed since last snapshot will be moved to S3).
     - Thus, it will take some time to create the 1st snapshot (because the whole volume need to be copied).
-- If you want to create a snapshot for a root volume of a production EC2 instance, it is better to deregister that instance from ELB (because taking snapshot could have performance degrade).
+- If you want to create a snapshot for a root volume of a production EC2 instance, it is better to deregister that instance from ELB.
+    - This could give you a consistent state of the snapshot (as the OS may continuously write to the root volume);
+    - This could also avoid potential performance degrade caused by writing snapshot.
 - AMIs can be created from both volumes and snapshots.
 - To migrate one EC2 instance to another AZ in the same region:
     - Take a snapshot of the EBS volume;
