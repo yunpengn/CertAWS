@@ -10,3 +10,4 @@
 - [4 Elastic Compute Cloud (EC2)](chapters/4_ec2.md)
 - [5 Elastic Block Store (EBS)](chapters/5_ebs.md)
 - [6 CloudWatch](chapters/6_cloudwatch.md)
+- [7 Database Service](chapters/7_database.md)
