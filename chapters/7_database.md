@@ -16,6 +16,32 @@
 - RDS is not a serverless technology. It is simply an AWS-managed database.
 - Patching & upgrading of RDS underlying OS and database software is controlled by AWS.
 	- However, Aurora Serverless is serverless.
+- RDS provides two backup mechanisms:
+	- **Automated backups:** store daily snapshots for the retention period (1 to 35 days) in S3. When there is a need for disaster recovery, RDS picks the last snapshot and applies transaction logs until the point of failure.
+	- **Database snapshots:** snapshots initiated by users manually, stored in S3 even after the RDS instance is deleted.
+	- No matter via automated backup or manual snapshot, the restored database will be on a new RDS instance with a new DNS endpoint.
+- All RDS engines support encryption at rest, done using AWS KMS.
+- **Multi-AZ** achieves data replication synchronously, while read replica achieves that asynchronously.
+- Automated backups must be turned on in order to deploy a read replica _(so that replication can be done via transaction logs)_.
+- Read replicas can be deployed in different regions, and can be promoted to master when necessary.
+
+### Redshift
+
+- AWS **Redshift** is a fast, fully-managed, PB-scale data warehouse service in the cloud.
+- Data warehouse databases apply a different architecture from both database layer and infrastructure layer.
+- Redshift can have 2 possible configurations:
+	- Single node mode, can store up to 160GB of data;
+	- Multi-node mode, consisting of 1 leader node and up to 128 compute nodes.
+- Redshift uses advanced column-based compression techiques to save storage space. It automatically samples the data and chooses the most appropriate compression schema when data is loaded to an empty table.
+- Redshift supports **massively parallel programming (MPP)**, which automatically distributes data and query load across all nodes (similar to the concept of map-reduce).
+- Redshift comes with backups enabled by default with a retention period of 1 - 35 days (by default 1 day).
+	- The snapshots can be additionally replicated to another region for DR.
+- Redshift always attempts to store at least 3 copies of data (the original copy, the replica on compute nodes, and a backup in S3).
+- The pricing model of Redshift is as follows:
+	- Compute node hours: # of hours * # of compute nodes (leader node does not incur cost);
+	- Backup (similar to that for RDS);
+	- Data transfer (within the VPC).
+- Redshift currently is only available within the same AZ, but its snapshots can be restored to another AZ.
 
 ## ElasticCache
 
@@ -25,3 +51,8 @@
 ## NoSQL Databases
 
 - **DynamoDB** is the NoSQL database invented by AWS.
+- Data in DynamoDB are stored in SSD and spread across at least 3 geographically distinct data centers.
+- It supports both document model and key-value pair model.
+- DynamoDB could be configured to have 2 consistency models:
+	- **Eventual consistent read (default):** could reach best performance, consistency reached within 1 second;
+	- **Strong consistent read:** could degrade performance, returns result only after all writes succeed.
