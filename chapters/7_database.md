@@ -38,15 +38,26 @@
 	- The snapshots can be additionally replicated to another region for DR.
 - Redshift always attempts to store at least 3 copies of data (the original copy, the replica on compute nodes, and a backup in S3).
 - The pricing model of Redshift is as follows:
-	- Compute node hours: # of hours * # of compute nodes (leader node does not incur cost);
+	- Compute node hours: `# of hours` * `# of compute nodes` (leader node does not incur cost);
 	- Backup (similar to that for RDS);
 	- Data transfer (within the VPC).
 - Redshift currently is only available within the same AZ, but its snapshots can be restored to another AZ.
+
+### Aurora
+
+- Aurora is a cloud-based RDBMS, compatible with MySQL/PostgreSQL, 5 times faster than MySQL, 10 times cheaper than commercial databases.
+- Aurora maintains 2 copies of the data, each stored in 3 AZs.
+	- The loss of up to 2 copies of the data will not affect write availability;
+	- The loss of up to 3 copies of the data will not affect read availablity.
+- Aurora's storage layer is self-healing. Its engine continously scans the underlying blocks and repairs automatically.
+- Aurora can have up to 15 Aurora replicas (allow automated failovers) and up to 5 MySQL replicas.
+- Aurora always enable automated backups and it does not affect its performance.
 
 ## ElasticCache
 
 - **ElasticCache** is a web service that provide cloud-hosted, AWS-managed in-memory cache. It provides two caching engines, **MemCached** and **Redis**.
 - Using **ElasticCache** and **read replicas** are two major methods to improve database performance on AWS.
+- Redis supports multi-AZ and can do backups & restores.
 
 ## NoSQL Databases
 
