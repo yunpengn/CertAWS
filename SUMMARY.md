@@ -12,3 +12,4 @@
 - [6 CloudWatch](chapters/6_cloudwatch.md)
 - [7 Database Service](chapters/7_database.md)
 - [8 DNS Service - Route53](chapters/8_route53.md)
+- [9 Virtual Private Cloud (VPC)](chapters/9_vpc.md)
