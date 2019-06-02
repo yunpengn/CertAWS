@@ -11,3 +11,4 @@
 - [5 Elastic Block Store (EBS)](chapters/5_ebs.md)
 - [6 CloudWatch](chapters/6_cloudwatch.md)
 - [7 Database Service](chapters/7_database.md)
+- [8 DNS Service - Route53](chapters/8_route53.md)
