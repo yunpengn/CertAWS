@@ -14,3 +14,5 @@
 - [8 DNS Service - Route53](chapters/08_route53.md)
 - [9 Virtual Private Cloud (VPC)](chapters/09_vpc.md)
 - [10 High Availability (HA)](chapters/10_ha.md)
+- [11 Serverless Architecture](chapters/11_serverless.md)
+- [12 Miscellaneous](chapters/12_misc.md)
