@@ -47,4 +47,18 @@
 
 ## API Gateway
 
+- API Gateway is a fully managed service to help publish, maintain, monitor and secure APIs.
+- In order to configure API gateway, you need to define an API, as well as the resources and nested resources.
+	- For each resource, need to setup the supported HTTP methods, security, and target.
+- It is possible to enable caching for API Gateway for better performance.
+- It is also possible to enable CORS policy on API Gateway, which would especially be useful for AJAX calls from frontend.
+- You can throttle API Gateway to prevent DDOS attacks.
+
+## Kinesis
+
+- Kinesis is a cloud platform to send, load and analyze streaming data.
+- There are 3 different types of Kinesis services:
+	- **Kinesis stream:** consists of shards, up to 5 reads per second (2MB/s) and 1000 writes per second (1MB/s), retention period is 24 hours to 7 days, the data capacity of the stream is limited by the number of shards;
+	- **Kinesis firehose:** no persistent storage, can use a lambda function to store data to S3 or ES cluster;
+	- **Kinesis analytics:** helps to analyze data on-the-fly with Kinesis stream or Kinesis firehose.
 - 
