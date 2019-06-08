@@ -2,6 +2,7 @@
 .DS_Store
 
 # GitBook build output folder
+.deploy_git/
 _book/
 
 # Logs

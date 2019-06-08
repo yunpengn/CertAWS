@@ -18,6 +18,7 @@
   },
   "scripts": {
     "deploy": "gitbook build",
+    "publish": "./scripts/publish_gh_pages.sh",
     "start": "gitbook serve"
   },
   "version": "0.1.0"
