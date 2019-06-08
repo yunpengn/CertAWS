@@ -35,6 +35,8 @@ The **AWS Certified Solutions Architect – Associate** examination is _130 minu
 
 This examination is a _pass-or-fail_ test. In order to pass it, one has to obtain a score of at least 720 out of 1000. Notice that the test paper may contain _unscored items_ that are placed on the test to gather statistical information.
 
+To schedule your examination today, go to the official website at [aws.training](https://www.aws.training). All the best!
+
 ## Licence
 
 Copyright &copy; 2018 - Present by [Niu Yunpeng](https://www.github.com/yunpengn/) under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/) (_"the licence"_).
