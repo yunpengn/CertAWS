@@ -61,4 +61,10 @@
 	- **Kinesis stream:** consists of shards, up to 5 reads per second (2MB/s) and 1000 writes per second (1MB/s), retention period is 24 hours to 7 days, the data capacity of the stream is limited by the number of shards;
 	- **Kinesis firehose:** no persistent storage, can use a lambda function to store data to S3 or ES cluster;
 	- **Kinesis analytics:** helps to analyze data on-the-fly with Kinesis stream or Kinesis firehose.
-- 
+
+## Cognito
+
+- Cognito is a web identity federation service that gives users access to AWS resources after being successfully authenticated with an identity provider such as Amazon, Facebook or Google.
+- Congnito can help to synchronize user data for multiple mobile applications.
+- Cognito acts as an identity broker between the identity providers and AWS resources using a JWT token.
+- Cognito stores two kinds of data: user pool (for authentication) & identity pool (for authorization).
