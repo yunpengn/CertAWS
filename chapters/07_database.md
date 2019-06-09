@@ -17,8 +17,9 @@
 - Patching & upgrading of RDS underlying OS and database software is controlled by AWS.
 	- However, Aurora Serverless is serverless.
 - RDS provides two backup mechanisms:
-	- **Automated backups:** store daily snapshots for the retention period (1 to 35 days) in S3. When there is a need for disaster recovery, RDS picks the last snapshot and applies transaction logs until the point of failure.
-	- **Database snapshots:** snapshots initiated by users manually, stored in S3 even after the RDS instance is deleted.
+	- **Automated backups:** store daily snapshots for the retention period (1 to 35 days) in S3. When there is a need for disaster recovery, RDS picks the last snapshot and applies transaction logs until the point of failure;
+		- Daily backup happens in a daily maintainence window, and will continue if it does not finish when the maintainence window closes.
+	- **Database snapshots:** snapshots initiated by users manually, stored in S3 even after the RDS instance is deleted;
 	- No matter via automated backup or manual snapshot, the restored database will be on a new RDS instance with a new DNS endpoint.
 - All RDS engines support encryption at rest, done using AWS KMS.
 - **Multi-AZ** achieves data replication synchronously, while read replica achieves that asynchronously.

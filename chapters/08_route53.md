@@ -14,10 +14,14 @@
 
 ## Routing Policy
 
-- Simple routing policy: can have one record with multiple IP addresses, which are returned to users in a random order.
+- Simple routing policy: can create only 1 basic record of each name and type, but can route traffic to a single record with multiple values (such as an A record with multiple IP addresses), in which case the multiple values are returned in random order.
 - Weighted routing policy: allows to split traffic based on different weights assigned, which can be used together with _health check_. Route53 will remove those whose health check has failed.
 - Latency routing policy: allows to route traffic based on the lowest network latency for the end user.
 - Failover routing policy: used to create active/passive setup. Route53 uses a health check to monitor the primary site, and switches to the DR site if the primary site is down.
 - Geo-location routing policy: allows to route traffic based on the geographic location of the end user.
 - Geoproximity routing policy (traffic flow only): route traffic based on the geographic location of the resources and the end user, can adjust the routing by providing a _bias_.
-- Multi-value answer routing policy: return multiple values (such as IP addresses), also able to specify health check for each resource.
+- Multi-value answer routing policy: can create multiple records of the same name and type, and also able to associate health check with records. When a client makes a DNS request with multi-value routing policy, Route53 will randomly select up to 8 healthy records at a random order.
+
+## References
+
+- [Understand Multivalue and Simple Routing Policies](https://aws.amazon.com/premiumsupport/knowledge-center/multivalue-versus-simple-policies/)

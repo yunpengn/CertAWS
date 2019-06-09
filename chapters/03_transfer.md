@@ -8,7 +8,11 @@ AWS offers a wide range of options for data transfer. You should choose the appr
 - **CloudFront (CF)** is AWS-hosted CDN, which concentrates around 2 terminologies:
     - **Edge location:** the location where content will be cached. There are much more edge locations available than AZs;
         - Edge locations are NOT read-only. You can write to them as well. For example, it can be used to achieve transfer acceleration for S3 buckets (so that users can upload files faster);
-        - Objects are cached for a certain time called **time to live (TTL)**. However, you can clear cached objects before they are expired (but you will be charged additionally).
+        - Objects are cached for a certain time called **time to live (TTL)**;
+        - To clear cached objects before they are expired, you can either use invalidation requests or use file versioning to serve a different version of the file that has a different name.
+            - The first 1000 invalidation requests per month is free, but you will be charged additionally if you go beyond this;
+            - It takes some time for manual invalidation requests to take effects on all edge locations;
+            - You cannot invalidate files served by an RTMP distribution.
     - **Origin:** the origin (either S3, EC2, ELB or Route53) of the content to be distributed;
     - **Distribution:** the collection of all edge locations used to deliver the given content.
 - CF mainly have a few usages:
@@ -33,3 +37,7 @@ AWS offers a wide range of options for data transfer. You should choose the appr
         - **Stored volumes:** store all data primarily at local, while asynchronously back up to AWS;.
         - **Cached volumes:** store all data primarily in S3, but retain frequently accessed data in local storage gateway.
     - **Tape Gateway (VTL):** archive data in AWS with low cost using virtual tape library (VTL).
+
+## References
+
+- [CloudFront Developer Guide - Invalidating files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html)

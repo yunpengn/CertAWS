@@ -3,7 +3,10 @@
 - AWS **Virtual Private Cloud (VPC)** helps to provision a logically isolated section of AWS cloud, where you can launch AWS resources in a virtual network you define (and completely control).
 - We could create 2 types of VPCs: default VPC and custom VPC.
 - **VPC peering:** connect one VPC with another via a direct network route using private IP addresses. This make instances behave as if they were on the same private network.
-	- Currently, VPC peering only allows star configuration, no transitive peering.
+	- You cannot create a VPC peering connection between VPCs with matching or overlapping IPv4 CIDR blocks;
+	- Communication over IPv6 is not supported for an inter-region VPC peering connection;
+	- Currently, VPC peering only allows star configuration, no transitive peering (i.e., VPC peering does not support chaining);
+	- VPC peering does not support edge-to-edge routing. This means, VPC peering cannot be further extended by VPN connection, DirectConnect, Internet Gateway, NAT device, VPC endpoint, etc.
 - SGs are stateful, while network ACLs are stateless.
 - All resources in the same subset must be in the same AZ.
 - Within each subset, 5 IP addresses are reserved.
@@ -54,3 +57,7 @@
 - VPC endpoint helps to privately connect VPC to supported AWS services and VPC endpoint services by PrivateLink.
 - There are two types of VPC endpoints: interface endpoints and gateway endpoints.
 - VPC endpoints are virtual devices.
+
+## References
+
+- [Unsupported VPC peering configurations](https://docs.aws.amazon.com/vpc/latest/peering/invalid-peering-configurations.html)
