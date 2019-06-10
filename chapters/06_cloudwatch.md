@@ -14,6 +14,7 @@
 	- By turning on detailed monitoring (with an additional charge), this can be changed to every 1 minute.
 - CloudWatch alarms can be created to send notifications.
 	- You can create a _billing alert_ in CloudWatch.
+- CloudWatch stores historical statistics for a period of 15 months.
 
 ## AWS CLI
 
