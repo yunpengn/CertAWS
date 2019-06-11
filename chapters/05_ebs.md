@@ -10,11 +10,12 @@
 - For an EBS-backed EC2 instance, the EBS volume and EC2 instance must be in the same AZ.
 - The root EBS of an EC2 instance will be deleted by default when the instance is terminated.
 - Snapshots exist on S3. They are point-in-time copies of volumes.
+    - To take a snapshot of an EBS volume, it has to go through 2 phases: _initial cataloguing phase_ (lock the file system and calculate the change list, during which the volume cannot be accessed) and _data copying phase_ (copy the changes to S3).
 - Snapshots are also **incremental** (only blocks that have changed since last snapshot will be moved to S3).
     - Thus, it will take some time to create the 1st snapshot (because the whole volume need to be copied).
-- If you want to create a snapshot for a root volume of a production EC2 instance, it is better to deregister that instance from ELB.
+- If you want to create a snapshot for a root volume of a production EC2 instance, it is better to deregister that instance from ELB and then terminate it.
     - This could give you a consistent state of the snapshot (as the OS may continuously write to the root volume);
-    - This could also avoid potential performance degrade caused by writing snapshot.
+    - This could also avoid potential performance degrade caused by writing snapshot (because the volume will be unavailable during _the initial cataloguing phase_).
 - AMIs can be created from both volumes and snapshots.
 - To migrate one EC2 instance to another AZ in the same region:
     - Take a snapshot of the EBS volume;
