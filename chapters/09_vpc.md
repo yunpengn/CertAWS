@@ -1,6 +1,9 @@
 # Virtual Private Cloud (VPC)
 
 - AWS **Virtual Private Cloud (VPC)** helps to provision a logically isolated section of AWS cloud, where you can launch AWS resources in a virtual network you define (and completely control).
+	- An VPC stays in a single region, but could cross multiple AZs (for example, you can create one subnet for each AZ);
+	- However, VPC peering supports for cross-region VPCs;
+	- EC2 instances in a clustered placement groups could exist in VPC in different regions as long as they are peered.
 - We could create 2 types of VPCs: default VPC and custom VPC.
 - **VPC peering:** connect one VPC with another via a direct network route using private IP addresses. This make instances behave as if they were on the same private network.
 	- You cannot create a VPC peering connection between VPCs with matching or overlapping IPv4 CIDR blocks;

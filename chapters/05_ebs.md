@@ -33,7 +33,8 @@
     - **EBS volumes:** created from an EBS snapshot;
     - **Instance store:** created from an instance store volume using a template stored on S3.
 - Instance store backed volumes are sometimes called _ephemeral volumes_.
-    - They cannot be stopped. If the underlying host fails, data will be lost.
+    - They cannot be stopped. Data will be lost if you try to stop them;
+    - If the underlying host fails, data will be lost;
     - They can be rebooted and data won't be lost.
 - EBS backed volumes can be stopped and rebooted. Data won't be lost.
 - By default, root volumes of both types will be deleted on termination.
