@@ -20,6 +20,8 @@ AWS offers a wide range of options for data transfer. You should choose the appr
         - CF even allows to specify error pages (for example, which page should be displayed for `404`).
     - Large file distribution (download);
     - RTMP (for media streaming).
+- CF can be configured to [cache content based on specified GET parameters](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html) in the query string. Also, it is possible to forward query parameters to the origin as well.
+    - For RMTP distributions, CF will NOT forward query parameters to the origin. All query parameters will be dropped.
 
 ## Snowball & Snowmobile
 

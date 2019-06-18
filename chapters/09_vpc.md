@@ -2,6 +2,7 @@
 
 - AWS **Virtual Private Cloud (VPC)** helps to provision a logically isolated section of AWS cloud, where you can launch AWS resources in a virtual network you define (and completely control).
 	- An VPC stays in a single region, but could cross multiple AZs (for example, you can create one subnet for each AZ);
+		- A subnet is called a _public subnet_ if its route table has an entry that directs traffic to the Internet Gateway.
 	- However, VPC peering supports for cross-region VPCs;
 	- EC2 instances in a clustered placement groups could exist in VPC in different regions as long as they are peered.
 - We could create 2 types of VPCs: default VPC and custom VPC.
@@ -15,6 +16,7 @@
 - Within each subset, 5 IP addresses are reserved.
 - To balance the usage, AWS randomizes the names of the AZs for each region.
 - Each load balancer has to be associated with at least 2 subsets.
+- To ensure all `COPY` and `UNLOAD` traffic flows inside an VPC, you should enable AWS Redshift **Enhanced VPC Routing**.
 
 ## NAT Instance & NAT Gateway
 
@@ -23,6 +25,10 @@
 	- An NAT instance itself must be in a public subnet.
 	- In order to work, there must be a route out of the private subnet to the NAT instance.
 - To create an AZ-independent architecture, create an NAT instance for each AZ and make sure resources in each AZ use the NAT gateway in the same AZ.
+- NAT Instance / Gateway is different from Internet Gateway:
+	- NAT devices are used to direct traffic from private subnet to public subnet, while Internet Gateway is used to direct traffic from public subnet to external Internet outside the VPC;
+	- Each VPC can only have 1 Internet gateway. However, there should be 1 NAT device in each AZ of the VPC;
+	- Internet Gateway is not a physical device, thus it does not limit the bandwidth of Internet connectivity. However, even an NAT Gateway has a bandwidth limit of 10Gbps.
 
 ## Network ACL
 

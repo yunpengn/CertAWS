@@ -33,9 +33,9 @@ The **AWS Certified Solutions Architect – Associate** examination is _130 minu
 - _Multiple-choice question:_ choose 1 correct answer out of 4 options; or
 - _Multiple-response question:_ choose 2 correct answers out of 5 options.
 
-This examination is a _pass-or-fail_ test. In order to pass it, one has to obtain a score of at least 720 out of 1000. Notice that the test paper may contain _unscored items_ that are placed on the test to gather statistical information.
+This examination is a _pass-or-fail_ test. In order to pass it, one has to obtain a score of at least 720 out of 1000. Notice that the test paper may contain _unscored items_ that are placed on the test to gather statistical information. The examination costs $150.
 
-Since July 2014, [practice examination](https://aws.amazon.com/about-aws/whats-new/2014/07/07/aws-certification-practice-exams-now-available/) is also available. For associate level, the practice examination would include 20 questions, which shall be done in 30 minutes.
+Since July 2014, [practice examination](https://aws.amazon.com/about-aws/whats-new/2014/07/07/aws-certification-practice-exams-now-available/) is also available. For associate level, the practice examination would include 20 questions, which shall be done in 30 minutes. The practice examination costs $20.
 
 To schedule your examination today, go to the official website at [aws.training](https://www.aws.training). All the best!
 
