@@ -58,8 +58,16 @@
 
 ## Direct Connect
 
-- Direct Connect is a service to establish a dedicated network connection from your premises to AWS.
-- Direct Connect is useful if you need a stable and reliable secure connection, or have high throughput workloads.
+- **Direct Connect** is a service to establish a dedicated network connection from your premises to AWS.
+- **Direct Connect** is useful if you need a stable and reliable secure connection, or have high throughput workloads.
+
+## Virtual Private Gateway
+
+- To help services inside an AWS VPC get access to your on-premise network, the following components have to be created:
+	- A **Virtual Private Gateway**, which is the VPN concentrator on the AWS side;
+	- An **AWS Transit Gateway** or **Customer Gateway** (i.e., your VPN gateway device), which is from the on-premise side.
+- Traffic via **Virtual Private Gateway** will still go through the public Internet (although it will be encrypted).
+	- However, **Direct Connect** provides a fully dedicated & private connection.
 
 ## VPC Endpoint
 
