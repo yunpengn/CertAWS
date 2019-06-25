@@ -60,6 +60,8 @@
 
 - **Direct Connect** is a service to establish a dedicated network connection from your premises to AWS.
 - **Direct Connect** is useful if you need a stable and reliable secure connection, or have high throughput workloads.
+- AWS has recently announced a new service **Direct Connect Gateway**, which alllows the users of **Direct Connect** to connect to multiple VPCs in the same or different regions.
+	- **Direct Connect Gateway** is built on top of **Direct Connect**.
 
 ## Virtual Private Gateway
 
