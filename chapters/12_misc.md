@@ -68,3 +68,10 @@
 - Congnito can help to synchronize user data for multiple mobile applications.
 - Cognito acts as an identity broker between the identity providers and AWS resources using a JWT token.
 - Cognito stores two kinds of data: user pool (for authentication) & identity pool (for authorization).
+
+## AWS Well-Architected Framework
+
+- **AWS Well-Architected Framework** is a set of questions that you can use to evaluate how well your architecture is aligned to AWS practices.
+- It consists of 5 pillars:
+
+![5 Pillars](../img/5_pillars.png)
