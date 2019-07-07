@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6bbac67-0b46-45fe-a539-28f2c0f3a611/deploy-status)](https://app.netlify.com/sites/certaws/deploys)
 [![Build Status](https://travis-ci.com/yunpengn/CertAWS.svg?branch=master)](https://travis-ci.com/yunpengn/CertAWS)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=yunpengn/CertAWS)](https://dependabot.com)
 
