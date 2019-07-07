@@ -4,6 +4,8 @@ This book is a study & preparation guide for the [AWS Certificate Examination](h
 
 [Yunpeng](https://yunpeng.github.io/) is a software engineer. Thus, this guide will be presented from the perspective of a developer. The target audience would be developers who have or want to work on cloud-based, scalable, highly-available, fault-tolerant systems. However, you should find little difficulty in reading this guide if you are a SRE (site reliability engineering) engineer.
 
+Yunpeng has passed the [AWS Certified Solutions Architect – Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/) examination on July 2nd, 2019. See his badge at [here](https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-07-02&ci=AWS00898411). He has compiled all his knowledge regarding the different services of AWS into this guide.
+
 ## Examination Objectives
 
 According to the [official examination guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate_Feb_2018_%20Exam_Guide_v1.5.2.pdf), the **AWS Certified Solutions Architect – Associate** examination is designed to test
