@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "node"
+
+install:
+  - gem install awesome_bot
+  - npm install
+
+script:
+  - awesome_bot README.md --allow-dupe --allow-redirect --allow 429 --skip-save-results -w localhost:4000,CertAWS.netlify.com
+  - npm run deploy
+
+cache: npm

@@ -1,0 +1,447 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6 CloudWatch · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07_database.html" />
+    
+    
+    <link rel="prev" href="05_ebs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6 CloudWatch</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cloudwatch">CloudWatch</h1>
+<ul>
+<li>CloudWatch is a monitoring service to monitor all resources &amp; application running on AWS.</li>
+<li>CloudWatch is primarily used to monitor performance, including but not limited to:<ul>
+<li>Compute: EC2 instances, ASG, ELB, Route53 health checks;</li>
+<li>Storage: EBS, storage gateway;</li>
+<li>Content delivery: CloudFront.</li>
+</ul>
+</li>
+<li>CloudWatch include host-level metrics such as CPU, network, disk and status check.</li>
+<li>CloudWatch is different from <strong>CloudTrial</strong> or <strong>AWS Config</strong>:<ul>
+<li><strong>CloudWatch:</strong> can be used as an application log service;</li>
+<li><strong>CloudTrail:</strong> an audit log service that records down all API calls to any AWS resource;</li>
+<li><strong>AWS Config:</strong> set configurations rules that your AWS resources need to comply with, and records down the changes to the configurations of any AWS resource in an S3 bucket.</li>
+</ul>
+</li>
+<li>CloudWatch will monitor events related to EC2 instances every 5 minutes by default.<ul>
+<li>By turning on detailed monitoring (with an additional charge), this can be changed to every 1 minute.</li>
+</ul>
+</li>
+<li>CloudWatch alarms can be created to send notifications.<ul>
+<li>You can create a <em>billing alert</em> in CloudWatch.</li>
+</ul>
+</li>
+<li>CloudWatch stores historical statistics for a period of 15 months.</li>
+</ul>
+<h2 id="aws-cli">AWS CLI</h2>
+<ul>
+<li>AWS CLI achieves almost the same set of functionalities as the AWS management console.</li>
+<li>AWS CLI access need to be set up through IAM.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05_ebs.html" class="navigation navigation-prev " aria-label="Previous page: 5 Elastic Block Store (EBS)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07_database.html" class="navigation navigation-next " aria-label="Next page: 7 Database Service">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6 CloudWatch","level":"2.6","depth":1,"next":{"title":"7 Database Service","level":"2.7","depth":1,"path":"chapters/07_database.md","ref":"chapters/07_database.md","articles":[]},"previous":{"title":"5 Elastic Block Store (EBS)","level":"2.5","depth":1,"path":"chapters/05_ebs.md","ref":"chapters/05_ebs.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/06_cloudwatch.md","mtime":"2019-06-10T15:24:15.760Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

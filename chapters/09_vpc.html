@@ -1,0 +1,519 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9 Virtual Private Cloud (VPC) · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10_ha.html" />
+    
+    
+    <link rel="prev" href="08_route53.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9 Virtual Private Cloud (VPC)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="virtual-private-cloud-vpc">Virtual Private Cloud (VPC)</h1>
+<ul>
+<li>AWS <strong>Virtual Private Cloud (VPC)</strong> helps to provision a logically isolated section of AWS cloud, where you can launch AWS resources in a virtual network you define (and completely control).<ul>
+<li>An VPC stays in a single region, but could cross multiple AZs (for example, you can create one subnet for each AZ);<ul>
+<li>A subnet is called a <em>public subnet</em> if its route table has an entry that directs traffic to the Internet Gateway.</li>
+</ul>
+</li>
+<li>However, VPC peering supports for cross-region VPCs;</li>
+<li>EC2 instances in a clustered placement groups could exist in VPC in different regions as long as they are peered.</li>
+</ul>
+</li>
+<li>We could create 2 types of VPCs: default VPC and custom VPC.</li>
+<li><strong>VPC peering:</strong> connect one VPC with another via a direct network route using private IP addresses. This make instances behave as if they were on the same private network.<ul>
+<li>You cannot create a VPC peering connection between VPCs with matching or overlapping IPv4 CIDR blocks;</li>
+<li>Communication over IPv6 is not supported for an inter-region VPC peering connection;</li>
+<li>Currently, VPC peering only allows star configuration, no transitive peering (i.e., VPC peering does not support chaining);</li>
+<li>VPC peering does not support edge-to-edge routing. This means, VPC peering cannot be further extended by VPN connection, DirectConnect, Internet Gateway, NAT device, VPC endpoint, etc.</li>
+</ul>
+</li>
+<li>SGs are stateful, while network ACLs are stateless.</li>
+<li>All resources in the same subset must be in the same AZ.</li>
+<li>Within each subset, 5 IP addresses are reserved.</li>
+<li>To balance the usage, AWS randomizes the names of the AZs for each region.</li>
+<li>Each load balancer has to be associated with at least 2 subsets.</li>
+<li>To ensure all <code>COPY</code> and <code>UNLOAD</code> traffic flows inside an VPC, you should enable AWS Redshift <strong>Enhanced VPC Routing</strong>.</li>
+</ul>
+<h2 id="nat-instance--nat-gateway">NAT Instance &amp; NAT Gateway</h2>
+<ul>
+<li>NAT Gateway should always be used over NAT instance due to its HA support.</li>
+<li>NAT instance is simply an EC2 instance with a special AMI, whose source &amp; destination check is disabled.<ul>
+<li>An NAT instance itself must be in a public subnet.</li>
+<li>In order to work, there must be a route out of the private subnet to the NAT instance.</li>
+</ul>
+</li>
+<li>To create an AZ-independent architecture, create an NAT instance for each AZ and make sure resources in each AZ use the NAT gateway in the same AZ.</li>
+<li>NAT Instance / Gateway is different from Internet Gateway:<ul>
+<li>NAT devices are used to direct traffic from private subnet to public subnet, while Internet Gateway is used to direct traffic from public subnet to external Internet outside the VPC;</li>
+<li>Each VPC can only have 1 Internet gateway. However, there should be 1 NAT device in each AZ of the VPC;</li>
+<li>Internet Gateway is not a physical device, thus it does not limit the bandwidth of Internet connectivity. However, even an NAT Gateway has a bandwidth limit of 10Gbps.</li>
+</ul>
+</li>
+</ul>
+<h2 id="network-acl">Network ACL</h2>
+<ul>
+<li>Network ACL has both ALLOW and DENY rules.</li>
+<li>Network ACL is stateless <em>(inbound rules and outbound rules are not symmetric)</em>.</li>
+<li>Network ACL evaluates its rules based on the priority assigned.<ul>
+<li>However, network ACL rules always have a higher priority than SG rules.</li>
+</ul>
+</li>
+<li>Each VPC comes with a default ACL, which by default allows all inbound &amp; outbound traffic.</li>
+<li>Each subset can only be associated with only 1 ACL at a time.</li>
+</ul>
+<h2 id="flow-log">Flow Log</h2>
+<ul>
+<li>VPC Flow Logs is a feature to capture information about IP traffic going from &amp; to network interfaces in a VPC. It uses CloudWatch logs (or S3 bucket) to store the data.</li>
+<li>Flow logs can be created at 3 different levels: VPC, subset, network interface.</li>
+<li>The configrations for flow logs cannot be changed once created.</li>
+<li>Not all traffic are logged. For example, the following traffic will not be logged:<ul>
+<li>Traffic generated by instances when they try to contact AWS DNS server;</li>
+<li>Traffic generated by instances on Windows OS when they try to contact AWS Windows Licence server;</li>
+<li>Traffic from &amp; to <code>169.254.169.254</code> regarding instance metadata;</li>
+<li>Traffic to the reserved IP addresses for the default VPC router;</li>
+<li>DHCP traffic.</li>
+</ul>
+</li>
+</ul>
+<h2 id="bastion">Bastion</h2>
+<ul>
+<li>A Bastion instance (or called &quot;<em>jump boxes</em>&quot;) is used to securely adminster EC2 instances.</li>
+<li>NAT gateway cannot be used as a Bastion host.</li>
+</ul>
+<h2 id="direct-connect">Direct Connect</h2>
+<ul>
+<li><strong>Direct Connect</strong> is a service to establish a dedicated network connection from your premises to AWS.</li>
+<li><strong>Direct Connect</strong> is useful if you need a stable and reliable secure connection, or have high throughput workloads.</li>
+<li>AWS has recently announced a new service <strong>Direct Connect Gateway</strong>, which alllows the users of <strong>Direct Connect</strong> to connect to multiple VPCs in the same or different regions.<ul>
+<li><strong>Direct Connect Gateway</strong> is built on top of <strong>Direct Connect</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="virtual-private-gateway">Virtual Private Gateway</h2>
+<ul>
+<li>To help services inside an AWS VPC get access to your on-premise network, the following components have to be created:<ul>
+<li>A <strong>Virtual Private Gateway</strong>, which is the VPN concentrator on the AWS side;</li>
+<li>An <strong>AWS Transit Gateway</strong> or <strong>Customer Gateway</strong> (i.e., your VPN gateway device), which is from the on-premise side.</li>
+</ul>
+</li>
+<li>Traffic via <strong>Virtual Private Gateway</strong> will still go through the public Internet (although it will be encrypted).<ul>
+<li>However, <strong>Direct Connect</strong> provides a fully dedicated &amp; private connection.</li>
+</ul>
+</li>
+</ul>
+<h2 id="vpc-endpoint">VPC Endpoint</h2>
+<ul>
+<li>VPC endpoint helps to privately connect VPC to supported AWS services and VPC endpoint services by PrivateLink.</li>
+<li>There are two types of VPC endpoints: interface endpoints and gateway endpoints.</li>
+<li>VPC endpoints are virtual devices.</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/vpc/latest/peering/invalid-peering-configurations.html" target="_blank">Unsupported VPC peering configurations</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08_route53.html" class="navigation navigation-prev " aria-label="Previous page: 8 DNS Service - Route53">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10_ha.html" class="navigation navigation-next " aria-label="Next page: 10 High Availability (HA)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9 Virtual Private Cloud (VPC)","level":"2.9","depth":1,"next":{"title":"10 High Availability (HA)","level":"2.10","depth":1,"path":"chapters/10_ha.md","ref":"chapters/10_ha.md","articles":[]},"previous":{"title":"8 DNS Service - Route53","level":"2.8","depth":1,"path":"chapters/08_route53.md","ref":"chapters/08_route53.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/09_vpc.md","mtime":"2019-06-25T14:37:44.412Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,507 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7 Database Service · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08_route53.html" />
+    
+    
+    <link rel="prev" href="06_cloudwatch.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7 Database Service</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="databases-on-aws">Databases on AWS</h1>
+<ul>
+<li>AWS provides a wide range of database services, including the traditional relational databases (RDBMS), NoSQL databases, in-memory cache, etc.</li>
+<li>Database services shall choose provisioned IOPS SSD (<code>io1</code>) as its underlying storage layer.</li>
+</ul>
+<h2 id="relational-database-service-rds">Relational Database Service (RDS)</h2>
+<ul>
+<li>Relational Database Service (RDS) mainly has two important features: <strong>multi-AZ (for disaster recovery)</strong> &amp; <strong>read replica (for performance)</strong>.</li>
+<li>There are 3 typical use cases of RDS:<ul>
+<li><strong>Online transaction processing (OLTP):</strong> real-time processing for business data, where queries usually run on a single row of record;</li>
+<li><strong>Online analytical processing (OLAP):</strong> post-event analytics to help with decision making, where queries usually run on a large set of records;</li>
+<li><strong>Data warehouse:</strong> used for business intelligence (BI), could contain very complex and extremely large datasets, could help to perform analysis for historical data.</li>
+</ul>
+</li>
+<li>AWS RDS provide a wide variety of database engines:<ul>
+<li><strong>For OLTP databases:</strong> <em>MySQL</em>, <em>PostgreSQL</em>, <em>Microsoft SQL Server</em>, <em>MariaDB</em>,<em>Oracle</em>, <em>Aurora</em> (invented by AWS);</li>
+<li><strong>For OLAP databases and data warehouses:</strong> <em>Redshift</em> (invented by AWS).</li>
+</ul>
+</li>
+<li>RDS is not a serverless technology. It is simply an AWS-managed database.</li>
+<li>Patching &amp; upgrading of RDS underlying OS and database software is controlled by AWS.<ul>
+<li>However, Aurora Serverless is serverless.</li>
+</ul>
+</li>
+<li>RDS provides two backup mechanisms:<ul>
+<li><strong>Automated backups:</strong> store daily snapshots for the retention period (1 to 35 days) in S3. When there is a need for disaster recovery, RDS picks the last snapshot and applies transaction logs until the point of failure;<ul>
+<li>Daily backup happens in a daily maintainence window, and will continue if it does not finish when the maintainence window closes.</li>
+</ul>
+</li>
+<li><strong>Database snapshots:</strong> snapshots initiated by users manually, stored in S3 even after the RDS instance is deleted;</li>
+<li>No matter via automated backup or manual snapshot, the restored database will be on a new RDS instance with a new DNS endpoint.</li>
+</ul>
+</li>
+<li>All RDS engines support encryption at rest, done using AWS KMS.</li>
+<li><strong>Multi-AZ</strong> achieves data replication synchronously, while read replica achieves that asynchronously.</li>
+<li>Automated backups must be turned on in order to deploy a read replica <em>(so that replication can be done via transaction logs)</em>.</li>
+<li>Read replicas can be deployed in different regions, and can be promoted to master when necessary.</li>
+</ul>
+<h3 id="redshift">Redshift</h3>
+<ul>
+<li>AWS <strong>Redshift</strong> is a fast, fully-managed, PB-scale data warehouse service in the cloud.</li>
+<li>Data warehouse databases apply a different architecture from both database layer and infrastructure layer.</li>
+<li>Redshift can have 2 possible configurations:<ul>
+<li>Single node mode, can store up to 160GB of data;</li>
+<li>Multi-node mode, consisting of 1 leader node and up to 128 compute nodes.</li>
+</ul>
+</li>
+<li>Redshift uses advanced column-based compression techiques to save storage space. It automatically samples the data and chooses the most appropriate compression schema when data is loaded to an empty table.</li>
+<li>Redshift supports <strong>massively parallel programming (MPP)</strong>, which automatically distributes data and query load across all nodes (similar to the concept of map-reduce).</li>
+<li>Redshift comes with backups enabled by default with a retention period of 1 - 35 days (by default 1 day).<ul>
+<li>The snapshots can be additionally replicated to another region for DR.</li>
+</ul>
+</li>
+<li>Redshift always attempts to store at least 3 copies of data (the original copy, the replica on compute nodes, and a backup in S3).</li>
+<li>The pricing model of Redshift is as follows:<ul>
+<li>Compute node hours: <code># of hours</code> * <code># of compute nodes</code> (leader node does not incur cost);</li>
+<li>Backup (similar to that for RDS);</li>
+<li>Data transfer (within the VPC).</li>
+</ul>
+</li>
+<li>Redshift currently is only available within the same AZ, but its snapshots can be restored to another AZ.</li>
+</ul>
+<h3 id="aurora">Aurora</h3>
+<ul>
+<li>Aurora is a cloud-based RDBMS, compatible with MySQL/PostgreSQL, 5 times faster than MySQL, 10 times cheaper than commercial databases.</li>
+<li>Aurora maintains 2 copies of the data, each stored in 3 AZs.<ul>
+<li>The loss of up to 2 copies of the data will not affect write availability;</li>
+<li>The loss of up to 3 copies of the data will not affect read availablity.</li>
+</ul>
+</li>
+<li>Aurora&apos;s storage layer is self-healing. Its engine continously scans the underlying blocks and repairs automatically.</li>
+<li>Aurora can have up to 15 Aurora replicas (allow automated failovers) and up to 5 MySQL replicas.</li>
+<li>Aurora always enable automated backups and it does not affect its performance.</li>
+</ul>
+<h2 id="elasticcache">ElasticCache</h2>
+<ul>
+<li><strong>ElasticCache</strong> is a web service that provide cloud-hosted, AWS-managed in-memory cache. It provides two caching engines, <strong>MemCached</strong> and <strong>Redis</strong>.</li>
+<li>Using <strong>ElasticCache</strong> and <strong>read replicas</strong> are two major methods to improve database performance on AWS.</li>
+<li>Redis supports multi-AZ and can do backups &amp; restores.</li>
+</ul>
+<h2 id="nosql-databases">NoSQL Databases</h2>
+<ul>
+<li><strong>DynamoDB</strong> is the NoSQL database invented by AWS.</li>
+<li>Data in DynamoDB are stored in SSD and spread across at least 3 geographically distinct data centers.</li>
+<li>It supports both document model and key-value pair model.</li>
+<li>DynamoDB could be configured to have 2 consistency models:<ul>
+<li><strong>Eventual consistent read (default):</strong> could reach best performance, consistency reached within 1 second;</li>
+<li><strong>Strong consistent read:</strong> could degrade performance, returns result only after all writes succeed.</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06_cloudwatch.html" class="navigation navigation-prev " aria-label="Previous page: 6 CloudWatch">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08_route53.html" class="navigation navigation-next " aria-label="Next page: 8 DNS Service - Route53">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7 Database Service","level":"2.7","depth":1,"next":{"title":"8 DNS Service - Route53","level":"2.8","depth":1,"path":"chapters/08_route53.md","ref":"chapters/08_route53.md","articles":[]},"previous":{"title":"6 CloudWatch","level":"2.6","depth":1,"path":"chapters/06_cloudwatch.md","ref":"chapters/06_cloudwatch.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/07_database.md","mtime":"2019-06-14T14:51:05.942Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

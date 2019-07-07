@@ -1,0 +1,483 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5 Elastic Block Store (EBS) · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06_cloudwatch.html" />
+    
+    
+    <link rel="prev" href="04_ec2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5 Elastic Block Store (EBS)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="elastic-block-store-ebs">Elastic Block Store (EBS)</h1>
+<ul>
+<li>Each EBS volume is automatically replicated within its AZ for HA and durability.</li>
+<li>There are 5 different types of EBS storage:</li>
+</ul>
+<p><img src="../img/ebs_types.png" alt="EBS Types"></p>
+<h2 id="volumes--snapshots">Volumes &amp; Snapshots</h2>
+<ul>
+<li>For an EBS-backed EC2 instance, the EBS volume and EC2 instance must be in the same AZ.</li>
+<li>The root EBS of an EC2 instance will be deleted by default when the instance is terminated.</li>
+<li>Snapshots exist on S3. They are point-in-time copies of volumes.<ul>
+<li>To take a snapshot of an EBS volume, it has to go through 2 phases: <em>initial cataloguing phase</em> (lock the file system and calculate the change list, during which the volume cannot be accessed) and <em>data copying phase</em> (copy the changes to S3).</li>
+</ul>
+</li>
+<li>Snapshots are also <strong>incremental</strong> (only blocks that have changed since last snapshot will be moved to S3).<ul>
+<li>Thus, it will take some time to create the 1st snapshot (because the whole volume need to be copied).</li>
+</ul>
+</li>
+<li>If you want to create a snapshot for a root volume of a production EC2 instance, it is better to deregister that instance from ELB and then terminate it.<ul>
+<li>This could give you a consistent state of the snapshot (as the OS may continuously write to the root volume);</li>
+<li>This could also avoid potential performance degrade caused by writing snapshot (because the volume will be unavailable during <em>the initial cataloguing phase</em>).</li>
+</ul>
+</li>
+<li>AMIs can be created from both volumes and snapshots.</li>
+<li>To migrate one EC2 instance to another AZ in the same region:<ul>
+<li>Take a snapshot of the EBS volume;</li>
+<li>Create an AMI from the snapshot;</li>
+<li>Use the created AMI to launch a new EC2 instance in the destination AZ.</li>
+</ul>
+</li>
+<li>To migrate one EC2 instance to another region:<ul>
+<li>Take a snapshot of the EBS volume;</li>
+<li>Create an AMI from the snapshot;</li>
+<li>Copy the created AMI to the destination region;</li>
+<li>Use the copied AMI in the destination region to launch a new EC2 instance.</li>
+</ul>
+</li>
+</ul>
+<h2 id="amazon-machine-image-ami">Amazon Machine Image (AMI)</h2>
+<ul>
+<li>When using AMIs, they could be backed by 2 types of devices:<ul>
+<li><strong>EBS volumes:</strong> created from an EBS snapshot;</li>
+<li><strong>Instance store:</strong> created from an instance store volume using a template stored on S3.</li>
+</ul>
+</li>
+<li>Instance store backed volumes are sometimes called <em>ephemeral volumes</em>.<ul>
+<li>They cannot be stopped. Data will be lost if you try to stop them;</li>
+<li>If the underlying host fails, data will be lost;</li>
+<li>They can be rebooted and data won&apos;t be lost.</li>
+</ul>
+</li>
+<li>EBS backed volumes can be stopped and rebooted. Data won&apos;t be lost.</li>
+<li>By default, root volumes of both types will be deleted on termination.<ul>
+<li>For EBS backed volumes, it can be configured to not delete root volume when terminated.</li>
+</ul>
+</li>
+</ul>
+<h2 id="encryption">Encryption</h2>
+<ul>
+<li>Root volumes cannot be encrypted by default at creation time.<ul>
+<li>However, you can encrypt it when you copy the snapshot created from it.</li>
+</ul>
+</li>
+<li>Snapshots of encrypted volumes are encrypted automatically.</li>
+<li>Volumes restored from encrypted snapshots are also encrypted automatically.</li>
+<li>Snapshots can be shared only if they are unencrypted.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04_ec2.html" class="navigation navigation-prev " aria-label="Previous page: 4 Elastic Compute Cloud (EC2)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06_cloudwatch.html" class="navigation navigation-next " aria-label="Next page: 6 CloudWatch">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5 Elastic Block Store (EBS)","level":"2.5","depth":1,"next":{"title":"6 CloudWatch","level":"2.6","depth":1,"path":"chapters/06_cloudwatch.md","ref":"chapters/06_cloudwatch.md","articles":[]},"previous":{"title":"4 Elastic Compute Cloud (EC2)","level":"2.4","depth":1,"path":"chapters/04_ec2.md","ref":"chapters/04_ec2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/05_ebs.md","mtime":"2019-06-15T05:39:38.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

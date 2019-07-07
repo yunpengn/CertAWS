@@ -1,0 +1,471 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1 Identity Access Management (IAM) · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02_s3.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1 Identity Access Management (IAM)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="identity-access-management-iam">Identity Access Management (IAM)</h1>
+<p>Identity Access Management (IAM) offers the following features</p>
+<ul>
+<li>Centralized control of your AWS account<ul>
+<li>A facade of access control to all services &amp; resources</li>
+</ul>
+</li>
+<li>Shared access of your AWS account<ul>
+<li>With the organization&apos;s root account, all employees would obtain their sub-accounts.</li>
+</ul>
+</li>
+<li>Granular permission control<ul>
+<li>Security group (SG)?</li>
+</ul>
+</li>
+<li>Identity Federation<ul>
+<li>LDAP, active directory, Facebook, etc.</li>
+</ul>
+</li>
+<li>Multi-factor authentication (MFA)<ul>
+<li>Can be enforced at the organization level (i.e., root account)</li>
+</ul>
+</li>
+<li>Password rotation policy<ul>
+<li>Can be enforced at the organization level (i.e., root account)</li>
+</ul>
+</li>
+</ul>
+<p>All these powerful features are around 4 terminologies, namely</p>
+<ul>
+<li><strong>Users:</strong> end users;</li>
+<li><strong>Groups:</strong> a collection of end users;</li>
+<li><strong>Policies:</strong> policy documents in JSON format<ul>
+<li>There are a lot of pre-defined policies published by AWS;</li>
+<li>All policy documents have a similar format to the code snippet below.</li>
+</ul>
+</li>
+<li><strong>Roles:</strong> assigned to various AWS resources.</li>
+</ul>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;Version&quot;</span>: <span class="hljs-string">&quot;2013-07-15&quot;</span>,
+    <span class="hljs-string">&quot;Statement&quot;</span>: {
+        <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>,
+        <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;*&quot;</span>,
+        <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;*&quot;</span>
+    }
+}
+</code></pre>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>IAM is <strong>universal</strong>.</li>
+<li>The root account has complete admin access.</li>
+<li>New users have no permissions by default when created.</li>
+<li>New users, however, are assigned <em>access key ID</em> and <em>secret access key</em> when created.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02_s3.html" class="navigation navigation-next " aria-label="Next page: 2 Simple Storage Service (S3)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1 Identity Access Management (IAM)","level":"2.1","depth":1,"next":{"title":"2 Simple Storage Service (S3)","level":"2.2","depth":1,"path":"chapters/02_s3.md","ref":"chapters/02_s3.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"INTRO.md","ref":"INTRO.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/01_iam.md","mtime":"2019-06-09T14:41:40.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

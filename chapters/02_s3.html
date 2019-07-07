@@ -1,0 +1,543 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2 Simple Storage Service (S3) · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_transfer.html" />
+    
+    
+    <link rel="prev" href="01_iam.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2 Simple Storage Service (S3)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="simple-storage-service-s3">Simple Storage Service (S3)</h1>
+<ul>
+<li>S3 is object-based storage, it allows you to store files (up to 5TB) in buckets.</li>
+<li>S3 bucket has a <strong>universal namespace</strong>. Each bucket name has to be unqiue in its availablity zone (AZ).<ul>
+<li>S3 bucket name has to be beween 3 and 63 characters long;</li>
+<li>S3 bucket name can only contain lower-case letters, numbers, dots and dashes;</li>
+<li>S3 bucket name must start with a lower-case letter or number.</li>
+</ul>
+</li>
+<li>S3 returns HTTP code <code>200</code> if file is uploaded sucessfully.</li>
+<li>Each object stored in S3 consists of<ul>
+<li>Key (i.e., file name)</li>
+<li>Value (i.e., file content)</li>
+<li>Version ID</li>
+<li>Metadata</li>
+<li>Access control list (ACL)</li>
+<li>Torrent</li>
+</ul>
+</li>
+<li>S3 ensures <strong>read-after-write consistency</strong> for <code>POST</code> requests (i.e., to add new files although AWS calls them new <code>PUT</code>s), while it only guarantees <strong>eventual consistency</strong> for <code>PUT</code> and <code>DELETE</code> requests.<ul>
+<li>If you use cross-region replication for your S3 buckets, the changes may not be reflected until the operation is fully propagated to all replicas.</li>
+</ul>
+</li>
+<li>It is possible to enable MFA for <code>DELETE</code> requests.</li>
+<li>It is also possible to turn on <em>server access logging</em>.<ul>
+<li>The log can be sent to another bucket belonging to the same or a different account.</li>
+</ul>
+</li>
+<li>The pricing model of S3 is calculated based on the storage size + data transfer cost.<ul>
+<li>The price for the storage size is different for different tiers;</li>
+<li>The price for data transfer:<ul>
+<li>Data transfer into S3 is generally free (although <code>PUT</code>, <code>POST</code>, <code>HEAD</code> requests do carry a small cost);</li>
+<li>Data transfer out of S3 is charged when you go beyond the free tier;</li>
+<li>Data transfer from S3 to CloudFront is currently free;</li>
+<li>Data transfer between S3 and EC2 (within the same region) is currently free.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>By default, you can only create up to 100 buckets per AWS account.<ul>
+<li>But you can increase this limit to 1000 by submitting a service limit increase.</li>
+</ul>
+</li>
+<li>When an S3 bucket is used for static website hosting, it is possible to redirect requests for an object to another object in the same bucket or an external URL.</li>
+<li>AWS used to request S3 customers to have randomized prefixes for object names to achieve faster performance (for better sharding). However, this is not the case any more since <a href="https://aws.amazon.com/about-aws/whats-new/2018/07/amazon-s3-announces-increased-request-rate-performance/?nc1=h_ls" target="_blank">July 2018</a>.</li>
+</ul>
+<h2 id="s3-tiering">S3 Tiering</h2>
+<p>There are different tiers of S3 buckets and the comparison between them is presented in the table below:</p>
+<p><img src="../img/s3_classes.png" alt="S3 Storage Classes"></p>
+<ul>
+<li>Compared with <em>S3 Standard</em> class, <em>S3 IA</em> and <em>S3 One-zone IA</em> offers the same durability of 99.999999999%.<ul>
+<li><em>S3 IA</em> and <em>S3 One-zone IA</em> offers the same high-throughput and low-latency feature as <em>S3 Standard</em>;</li>
+<li>Being <em>less frequently accessed</em> does not mean the access for them would be slower. The only tradeoff is an additional retrieval fee;</li>
+<li><em>S3 IA</em> and <em>S3 One-zone IA</em> requires each object to have a minimum size of 128KB. Objects will still be treated (and charged) as 128KB if smaller than 128KB.</li>
+</ul>
+</li>
+<li>Compare with <em>S3 Standard</em> and <em>S3 IA</em> class, <em>S3 One-zone IA</em> offers a slightly lower availability of 99.5%.</li>
+<li>Compared with <em>S3 Standard</em> class, S3 Reduced Redundancy Storage (RRS) offers a much lowwer durability of 99.99%, but offers the same availablity of 99.99%.<ul>
+<li>It is not recommended to use S3 RRS for new projects in some regions.</li>
+</ul>
+</li>
+<li>Usually, the <em>first-byte latency</em> for <em>S3 Glacier</em> would be 3 - 5 hours. However, AWS does provide different retrieval options, from a few minutes to hours:<ul>
+<li><strong>Expedited retrieval:</strong> access data in 1 - 5 minutes, for occasional urgent requests to retrieve a subset of archives, costing $0.03 per GB retrieved;</li>
+<li><strong>Standard retrieval:</strong> access data in 3 - 5 hours, costing $0.01 per GB retrieved;</li>
+<li><strong>Bulk retrieval:</strong> access large amount of data in 5 - 12 hours, costing $0.0025 per GB retrieved.</li>
+</ul>
+</li>
+<li>The <em>first-byte latency</em> for <em>S3 Glacier Deep Archive</em> would be within 12 hours.</li>
+</ul>
+<h2 id="security--encryption">Security &amp; Encryption</h2>
+<ul>
+<li>Access control to an S3 bucket can be managed using either a bucket ACL or a bucket policy.</li>
+<li>By default, all newly created buckets are <em>private</em>.</li>
+<li>There are 3 approaches to achieve encryption for your interaction with S3 buckets:<ul>
+<li><strong>Encryption in transit:</strong> using SSL/TLS (or HTTPS);</li>
+<li><strong>Server-side encryption (encryption at rest):</strong> the key could be from<ul>
+<li>S3 managed keys (also known as <em>SSE-S3</em>); or</li>
+<li>AWS key management service (also known as <em>SSE-KMS</em>); or</li>
+<li>Customer provided keys (also known as <em>SSE-C</em>);</li>
+</ul>
+</li>
+<li><strong>Client-side encryption:</strong> the data would be encrypted before sent out.</li>
+</ul>
+</li>
+</ul>
+<h2 id="versioning--lifecycle">Versioning &amp; Lifecycle</h2>
+<ul>
+<li>Using <strong>versioning</strong> with S3 could be used to backup data (similar to any VCS).<ul>
+<li>It stores all versions of an object (all writes + delete marker).</li>
+</ul>
+</li>
+<li>Once <em>enabled</em>, versioning cannot be <em>disabled</em>. It can only be <em>suspended</em>.</li>
+<li>Versioning can be integrated to lifecycle rules to optimize the size of the data stored.<ul>
+<li>Similar to the eviction policy (such as LFU or LRU) for Redis cache.</li>
+</ul>
+</li>
+<li>MFA delete can only be used when versioning is enabled.<ul>
+<li>If a bucket&apos;s versioning configuration is MFA Delete&#x2013;enabled, the bucket owner must include the <code>x-amz-mfa</code> header in requests to permanently delete an object version or change the versioning state of the bucket;</li>
+<li>All authorized IAM users can enable versioning, but only the bucket owner can enable MFA Delete.</li>
+</ul>
+</li>
+<li><strong>Lifecycle</strong> automates moving your objects between different storage classes.<ul>
+<li>It can be used in conjuction with versioning;</li>
+<li>It can be applied to current version and/or previous versions.</li>
+</ul>
+</li>
+</ul>
+<h2 id="replication--acceleration">Replication &amp; Acceleration</h2>
+<ul>
+<li>If you turn on <strong>cross-region replication</strong>, changes to objects in one bucket will be automatically propagated to another bucket for faster retrieval &amp; disaster recovery purposes.<ul>
+<li>Replication can be done for the whole bucket or object-based with certain prefixes or tags only;</li>
+<li>Versioning must be enabled on both <em>source bucket</em> and <em>destination bucket</em>;</li>
+<li>Files which are existing in a bucket when replication is turned on are not replicated automatically. However, subsequent updates to these files would be replicated;</li>
+<li>Delete markers are not replicated;</li>
+<li>Deletion of individual versions or delete markers (manually) would not be replicated;</li>
+<li><strong>Cross-region replication</strong> does not support chaining. In other words, it will not work if the source bucket is replicated from another bucket.</li>
+<li>It is also impossible to <strong>cross-region replicate</strong> buckets encrypted with <em>SSE-C</em>.</li>
+</ul>
+</li>
+<li><strong>Transfer acceleration</strong> takes advantage of <em>CloudFront</em>. Data arrived at edge locations will be routed to S3 over an optimized network path.</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Consistency_model" target="_blank">Consistency model</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html#ConsistencyModel" target="_blank">AWS S3 Documentation - Data Consistency Model</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-compare" target="_blank">AWS S3 Documentation - Storage Classes</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_iam.html" class="navigation navigation-prev " aria-label="Previous page: 1 Identity Access Management (IAM)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_transfer.html" class="navigation navigation-next " aria-label="Next page: 3 Data Transfer">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2 Simple Storage Service (S3)","level":"2.2","depth":1,"next":{"title":"3 Data Transfer","level":"2.3","depth":1,"path":"chapters/03_transfer.md","ref":"chapters/03_transfer.md","articles":[]},"previous":{"title":"1 Identity Access Management (IAM)","level":"2.1","depth":1,"path":"chapters/01_iam.md","ref":"chapters/01_iam.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/02_s3.md","mtime":"2019-06-18T15:16:53.983Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

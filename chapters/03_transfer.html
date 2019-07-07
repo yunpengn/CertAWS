@@ -1,0 +1,478 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3 Data Transfer · CertAWS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yunpeng Niu <neilniuyunpeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_ec2.html" />
+    
+    
+    <link rel="prev" href="02_s3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01_iam.html">
+            
+                <a href="01_iam.html">
+            
+                    
+                    1 Identity Access Management (IAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02_s3.html">
+            
+                <a href="02_s3.html">
+            
+                    
+                    2 Simple Storage Service (S3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="03_transfer.html">
+            
+                <a href="03_transfer.html">
+            
+                    
+                    3 Data Transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04_ec2.html">
+            
+                <a href="04_ec2.html">
+            
+                    
+                    4 Elastic Compute Cloud (EC2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05_ebs.html">
+            
+                <a href="05_ebs.html">
+            
+                    
+                    5 Elastic Block Store (EBS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06_cloudwatch.html">
+            
+                <a href="06_cloudwatch.html">
+            
+                    
+                    6 CloudWatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07_database.html">
+            
+                <a href="07_database.html">
+            
+                    
+                    7 Database Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08_route53.html">
+            
+                <a href="08_route53.html">
+            
+                    
+                    8 DNS Service - Route53
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09_vpc.html">
+            
+                <a href="09_vpc.html">
+            
+                    
+                    9 Virtual Private Cloud (VPC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10_ha.html">
+            
+                <a href="10_ha.html">
+            
+                    
+                    10 High Availability (HA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11_serverless.html">
+            
+                <a href="11_serverless.html">
+            
+                    
+                    11 Serverless Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12_misc.html">
+            
+                <a href="12_misc.html">
+            
+                    
+                    12 Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Question List
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3 Data Transfer</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="data-transfer">Data Transfer</h1>
+<p>AWS offers a wide range of options for data transfer. You should choose the appropriate one depending on the use case, such as the amount of the data, the frequency of transfer, etc.</p>
+<h2 id="cloudfront-cf">CloudFront (CF)</h2>
+<ul>
+<li>A <strong>content delivery network (CDN)</strong> is a system of distributed servers that deliver content to a user based on his/her geographic location.</li>
+<li><strong>CloudFront (CF)</strong> is AWS-hosted CDN, which concentrates around 2 terminologies:<ul>
+<li><strong>Edge location:</strong> the location where content will be cached. There are much more edge locations available than AZs;<ul>
+<li>Edge locations are NOT read-only. You can write to them as well. For example, it can be used to achieve transfer acceleration for S3 buckets (so that users can upload files faster);</li>
+<li>Objects are cached for a certain time called <strong>time to live (TTL)</strong>;</li>
+<li>To clear cached objects before they are expired, you can either use invalidation requests or use file versioning to serve a different version of the file that has a different name.<ul>
+<li>The first 1000 invalidation requests per month is free, but you will be charged additionally if you go beyond this;</li>
+<li>It takes some time for manual invalidation requests to take effects on all edge locations;</li>
+<li>You cannot invalidate files served by an RTMP distribution.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Origin:</strong> the origin (either S3, EC2, ELB or Route53) of the content to be distributed;</li>
+<li><strong>Distribution:</strong> the collection of all edge locations used to deliver the given content.</li>
+</ul>
+</li>
+<li>CF mainly have a few usages:<ul>
+<li>Static website, such as those built with <a href="https://angular.io" target="_blank">Angular.js</a>, <a href="https://reactjs.org" target="_blank">React.js</a>;<ul>
+<li>CF even allows to specify error pages (for example, which page should be displayed for <code>404</code>).</li>
+</ul>
+</li>
+<li>Large file distribution (download);</li>
+<li>RTMP (for media streaming).</li>
+</ul>
+</li>
+<li>CF can be configured to <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html" target="_blank">cache content based on specified GET parameters</a> in the query string. Also, it is possible to forward query parameters to the origin as well.<ul>
+<li>For RMTP distributions, CF will NOT forward query parameters to the origin. All query parameters will be dropped.</li>
+</ul>
+</li>
+</ul>
+<h2 id="snowball--snowmobile">Snowball &amp; Snowmobile</h2>
+<ul>
+<li><strong>Snowball</strong> and <strong>Snowmobile</strong> are both data transfer services for massive amount of data.<ul>
+<li>Each <strong>Snowball</strong> comes in either a 50TB or 80TB size;</li>
+<li>Each <strong>Snowball Edge</strong> comes in a 100TB size. It can additional provide compute capacities <em>(can be used as a mini, mobile-version AWS)</em>;</li>
+<li>Each <strong>Snowmobile</strong> can transfer up to 100PB, using a 45-foot shipping container.</li>
+</ul>
+</li>
+<li>A typical use case for both would be to help traditional enterprises move to the cloud. Such organizations may already have an established business for years and have accumulated a huge amount of data. Given the size of the amount, it is almost impossible to transfer to AWS using (even high-speed) network.</li>
+</ul>
+<h2 id="storage-gateway">Storage Gateway</h2>
+<ul>
+<li>There are 3 different types of storage gateway:<ul>
+<li><strong>File Gateway (NFS):</strong> store objects in S3 buckets, and access through a network file system (NFS) mount point;</li>
+<li><strong>Volume Gateway (iSCSI):</strong> asynchronously back up volumes as point-in-time snapshots (as EBS snapshots in AWS). These snapshots are incremental back-ups and compressed to save space;<ul>
+<li><strong>Stored volumes:</strong> store all data primarily at local, while asynchronously back up to AWS;.</li>
+<li><strong>Cached volumes:</strong> store all data primarily in S3, but retain frequently accessed data in local storage gateway.</li>
+</ul>
+</li>
+<li><strong>Tape Gateway (VTL):</strong> archive data in AWS with low cost using virtual tape library (VTL).</li>
+</ul>
+</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html" target="_blank">CloudFront Developer Guide - Invalidating files</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_s3.html" class="navigation navigation-prev " aria-label="Previous page: 2 Simple Storage Service (S3)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_ec2.html" class="navigation navigation-next " aria-label="Next page: 4 Elastic Compute Cloud (EC2)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3 Data Transfer","level":"2.3","depth":1,"next":{"title":"4 Elastic Compute Cloud (EC2)","level":"2.4","depth":1,"path":"chapters/04_ec2.md","ref":"chapters/04_ec2.md","articles":[]},"previous":{"title":"2 Simple Storage Service (S3)","level":"2.2","depth":1,"path":"chapters/02_s3.md","ref":"chapters/02_s3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yunpeng Niu <neilniuyunpeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":52,"left":52,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CertAWS","language":"en","links":{"sidebar":{}},"gitbook":"*","description":"","direction":"ltr"},"file":{"path":"chapters/03_transfer.md","mtime":"2019-06-18T14:26:47.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T04:47:12.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
