@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [10.x, 12.x, 13.x]
+        node: [13.x, 14.x, 15.x]
     steps:
       # See https://github.com/actions/checkout
       - name: Download the repository to $GITHUB_WORKSPACE
@@ -31,12 +31,13 @@ jobs:
           fetch-depth: 50
       # See https://github.com/actions/setup-node
       - name: Setup Node ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
+          check-latest: true
       # See https://github.com/actions/cache
       - name: Cache NPM packages
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
