@@ -19,7 +19,7 @@ jobs:
   # See https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-python
   gitbook-generate:
     name: Generate site on Python ${{ matrix.python-version }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         python-version: [3.7, 3.8]
@@ -51,7 +51,7 @@ jobs:
   # See https://help.github.com/en/actions/language-and-framework-guides
   validate-links:
     name: Validate links in README.md
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       # See https://github.com/actions/checkout
       - name: Download the repository to $GITHUB_WORKSPACE
