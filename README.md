@@ -7,7 +7,7 @@
 This repository presents the preparation guide for [AWS Certificate Examination](https://aws.amazon.com/certification/) written by [Yunpeng](https://yunpengn.github.io/). Currently, it is proundly powered by [GitBook](https://github.com/GitbookIO/gitbook).
 
 - Production Site: [https://yunpengn.github.io/CertAWS/](https://yunpengn.github.io/CertAWS/)
-- Staging Site: [https://CertAWS.netlify.com/](https://CertAWS.netlify.com/)
+- Staging Site: [https://CertAWS.netlify.app/](https://CertAWS.netlify.app/)
 
 ## Development
 
