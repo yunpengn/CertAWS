@@ -1,0 +1,44 @@
+# Website information
+site_name: CertAWS
+site_url: https://yunpengn.github.io/CertAWS
+site_description: AWS Certificate Examination Preparation Guide
+site_author: Yunpeng Niu
+
+# Repository information
+repo_url: https://github.com/yunpengn/CertAWS/
+repo_name: GitHub
+edit_uri: edit/master/chapters/
+remote_branch: gh-pages
+remote_name: origin
+
+# Content & navigation
+docs_dir: 'chapters'
+site_dir: 'site'
+nav:
+  - Introduction: 'index.md'
+  - Chapters:
+    - 1 Identity Access Management (IAM): '01_iam.md'
+    - 2 Simple Storage Service (S3): '02_s3.md'
+    - 3 Data Transfer: '03_transfer.md'
+    - 4 Elastic Compute Cloud (EC2): '04_ec2.md'
+    - 5 Elastic Block Store (EBS): '05_ebs.md'
+    - 6 CloudWatch: '06_cloudwatch.md'
+    - 7 Database Service: '07_database.md'
+    - 8 DNS Service - Route53: '08_route53.md'
+    - 9 Virtual Private Cloud (VPC): '09_vpc.md'
+    - 10 High Availability (HA): '10_ha.md'
+    - 11 Serverless Architecture: '11_serverless.md'
+    - 12 Miscellaneous: '12_misc.md'
+theme:
+  name: gitbook
+
+# Plugins
+plugins:
+  - search:
+      lang: ['en']
+      min_search_length: 2
+      separator: '[\s\-\.]+'
+
+# Others
+# copyright: 2018 - Present &copy; Niu Yunpeng
+google_analytics: ['UA-92228484-1', 'yunpengn.github.io/CertAWS']

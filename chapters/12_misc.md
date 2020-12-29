@@ -74,4 +74,4 @@
 - **AWS Well-Architected Framework** is a set of questions that you can use to evaluate how well your architecture is aligned to AWS practices.
 - It consists of 5 pillars:
 
-![5 Pillars](../img/5_pillars.png)
+![5 Pillars](img/5_pillars.png)

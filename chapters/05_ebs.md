@@ -3,7 +3,7 @@
 - Each EBS volume is automatically replicated within its AZ for HA and durability.
 - There are 5 different types of EBS storage:
 
-![EBS Types](../img/ebs_types.png)
+![EBS Types](img/ebs_types.png)
 
 ## Volumes & Snapshots
 

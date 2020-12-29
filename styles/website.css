@@ -1,5 +1,0 @@
-/* Disable prev & next navigation on all pages */
-.navigation.navigation-prev,
-.navigation.navigation-next {
-    display: none;
-}

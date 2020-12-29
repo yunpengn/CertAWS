@@ -11,8 +11,6 @@ This repository presents the preparation guide for [AWS Certificate Examination]
 
 ## Development
 
-- Make sure you have installed the latest version of [Node.js](https://nodejs.org/), [Npm](https://www.npmjs.com/) and [Git](https://git-scm.com/) on your development machine. Npm should come with Node.js.
-	- You chould check them by `git --version`, `node -v` and `npm -v`.
 - Fork and clone this repository to your computer.
 ```bash
 git clone git@github.com:yunpengn/CertAWS.git
@@ -21,15 +19,15 @@ git clone git@github.com:yunpengn/CertAWS.git
 ```bash
 cd CertAWS
 ```
-- Install all the dependencies stated in `package.json` (or `package-lock.json`).
+- Install all the dependencies stated.
 ```bash
-npm install
+pip3 install -r requirements.txt
 ```
 - Run the GitBook server to host the website locally.
 ```bash
-npm start
+mkdocs serve
 ```
-- Now, you can visit the website at `http://localhost:4000/`.
+- Now, you can visit the website at `http://127.0.0.1:8000/`.
 
 ## Deployment
 
@@ -37,14 +35,11 @@ Currently, this blog is being deployed to two environments concurrently, [produc
 
 ### Production deployment
 
-We use the [Git deployer plugin](https://github.com/hexojs/hexo-deployer-git) for Hexo to deploy the site to the [`gh-pages` branch](https://github.com/yunpengn/CertAWS/tree/gh-pages), which is then picked up by GitHub Pages automatically.
-
-- You should have followed the [section above](#development) to set up the local development environment.
-- Deploy the website by running `npm run publish`, which will in turn run a [shell script](scripts/publish_gh_pages.sh). _Prior to doing this, check that you have access to the Git repository._
+Run `mkdocs gh-deploy` to deploy to GitHub Pages.
 
 ### Staging deployment
 
-We are also using [Netlify](https://www.netlify.com) as a CI/CD service to host the staging site. The relevant configuration for Netlify can be found in the file [netlify.toml](netlify.toml), which basically runs `npm run deploy`. The staging pipeline would run whenever you push the changes to this GitHub repository and there is no manual step involved.
+We are also using [Netlify](https://www.netlify.com) as a CI/CD service to host the staging site. The relevant configuration for Netlify can be found in the file [netlify.toml](netlify.toml). The staging pipeline would run whenever you push the changes to this GitHub repository and there is no manual step involved.
 
 ## Licence
 
