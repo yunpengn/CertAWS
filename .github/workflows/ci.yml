@@ -17,7 +17,7 @@ on:
 # Defines all jobs to be run in parallel.
 jobs:
   # See https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-python
-  gitbook-generate:
+  mkdocs-generate:
     name: Generate site on Python ${{ matrix.python-version }}
     runs-on: ubuntu-20.04
     strategy:
