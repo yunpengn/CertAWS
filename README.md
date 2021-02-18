@@ -1,6 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b6bbac67-0b46-45fe-a539-28f2c0f3a611/deploy-status)](https://app.netlify.com/sites/certaws/deploys)
 [![CI pipeline](https://github.com/yunpengn/CertAWS/workflows/CI%20pipeline/badge.svg)](https://github.com/yunpengn/CertAWS/actions)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=yunpengn/CertAWS)](https://dependabot.com)
 
 # AWS Certificate Examination Preparation Guide
 
