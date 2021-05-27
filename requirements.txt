@@ -1,6 +1,6 @@
 click==7.1.2
 future==0.18.2
-importlib-metadata==3.4.0
+importlib-metadata==4.2.0
 Jinja2==2.11.3
 joblib==1.0.1
 livereload==2.6.3
